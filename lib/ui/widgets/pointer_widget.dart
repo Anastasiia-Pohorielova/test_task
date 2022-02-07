@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:test_task/res/app_consts.dart';
 import 'package:test_task/res/app_styles/app_shadows.dart';
 
+/// it is widget for pointer
 class PointerWidget extends StatelessWidget {
+
+  /// Diameter of pointer
   final double sizeOfPointer;
+  /// On tap function
   final Function() onTap;
 
+  /// Constructor for building widget
   const PointerWidget({
     required this.sizeOfPointer,
     required this.onTap,
@@ -23,7 +29,7 @@ class PointerWidget extends StatelessWidget {
           shape: BoxShape.circle,
           boxShadow: AppShadows.pointerShadow(),
         ),
-        child: const Text('Hey'),
+        child: const Text(AppConsts.pointerTitle),
       ),
     );
   }
